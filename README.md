@@ -24,16 +24,20 @@ Things you may want to cover:
 * ...
 
 
-## usersテーブル
+## users table
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|mail|string|null: false, unique: true|
+
+### Association
+- has_many: groups, through: members
+- has_many: message
+- has_many: members
 
 
-
-### groupsテーブル
+### groups table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -42,7 +46,7 @@ Things you may want to cover:
 
 
 
-#### groups_usersテーブル
+#### groups_users table
 
 |Column|Type|Options|
 |------|----|-------|
