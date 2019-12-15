@@ -25,34 +25,34 @@ Things you may want to cover:
 
 
 ## users table
-
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |mail|string|null: false, unique: true|
 
-### Association
+## Association
 - has_many: groups, through: members
 - has_many: message
 - has_many: members
 
 
 ### groups table
-
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|group_id|integer|null: dalse, foreign_key: true|
 
+### Association
+- has_many: users, through: members
+- has_many: message
+- has_many: members
 
 
 #### groups_users table
-
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-###### Association
+##### Association
 - belongs_to :group
 - belongs_to :user
