@@ -1,0 +1,30 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info__group
+      .chat-main__group-info__group__group-name 
+        %p test
+      .chat-main__group-info__group__group-member
+        %p Member Shogo
+    .chat-main__group-info__group-edit
+      .chat-main__group-info__group-edit__btn
+        %p Edit
+      =link_to "", class: "chat-main__group-info__group-edit__btn"
+
+  .chat-main__message-list
+    .chat-main__message-list__name
+      %p Shogo
+    .chat-main__message-list__time
+      %p 2019/11/20(Wed)
+    
+    .chat-main__message-list__message
+      %p おはよう！
+   
+  .chat-main__message-form
+    .chat-main__message-form__message__text
+      %p type a message
+      .chat-main__message-form__message__text__image
+        %label{class: "chat-main__message-form__message__text__image"}
+          = icon('fas', 'image')
+          %input{type: "file", style: "display:none"}
+    .chat-main__message-form__submit-btn
+      %p Send
