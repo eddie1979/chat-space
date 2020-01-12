@@ -63,7 +63,7 @@ Things you may want to cover:
 - has_many :massages
 
 
-## groups_usersテーブル
+## group_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
