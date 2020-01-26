@@ -69,5 +69,5 @@ gem 'jquery-rails'
 gem 'pry-rails'
 gem 'net-ssh', '~> 5.2'
 
-
+gem 'fog-aws'
 
